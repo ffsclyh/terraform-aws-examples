@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - "cd /usr/bin"
+      - "curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip"
+      - "unzip -o terraform.zip"
+
+  build:
+    commands:
+      - cd "$CODEBUILD_SRC_DIR"
+      - terraform init
+      - terraform apply --auto-approve
+
+  post_build:
+    commands:
+      - echo "Terraform completed on `date`"
+
+artifacts:
+  files:
+    - '**/*'
