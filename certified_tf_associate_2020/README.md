@@ -6,7 +6,7 @@ One could find **study_guide** which contains the TOC and more information on th
 
 ## Flashcard
 ```
-https://www.brainscape.com/packs/terraform-associate-certification-15603211
+[https://www.brainscape.com/packs/terraform-associate-certification-15603211]: https://www.brainscape.com/packs/terraform-associate-certification-15603211
 ```
 
 
