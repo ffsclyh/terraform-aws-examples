@@ -5,9 +5,9 @@ This folder contains the information about the terraform associate examples and 
 One could find **study_guide** which contains the TOC and more information on theory and some examples which are more critical to exam.
 
 ## Flashcard
-```
-[https://www.brainscape.com/packs/terraform-associate-certification-15603211]: https://www.brainscape.com/packs/terraform-associate-certification-15603211
-```
+
+[1]: https://www.brainscape.com/packs/terraform-associate-certification-15603211
+
 
 
 # code01
