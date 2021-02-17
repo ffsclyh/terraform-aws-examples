@@ -1,0 +1,50 @@
+module "gce-container" {
+  source = "git:terraform-google-modules/container-vm/google"
+  version = "~> 2.0"
+
+  container = {
+    image="gcr.io/google-samples/hello-app:1.0"
+    env = [
+      {
+        name = "TEST_VAR"
+        value = "Hello World!"
+      }
+    ],
+
+    # Declare volumes to be mounted.
+    # This is similar to how docker volumes are declared.
+    volumeMounts = [
+      {
+        mountPath = "/cache"
+        name      = "tempfs-0"
+        readOnly  = false
+      },
+      {
+        mountPath = "/persistent-data"
+        name      = "data-disk-0"
+        readOnly  = false
+      },
+    ]
+  }
+
+  # Declare the Volumes which will be used for mounting.
+  volumes = [
+    {
+      name = "tempfs-0"
+
+      emptyDir = {
+        medium = "Memory"
+      }
+    },
+    {
+      name = "data-disk-0"
+
+      gcePersistentDisk = {
+        pdName = "data-disk-0"
+        fsType = "ext4"
+      }
+    },
+  ]
+
+  restart_policy = "Always"
+}
