@@ -6,8 +6,6 @@ One could find **study_guide** which contains the TOC and more information on th
 
 ## Flashcard
 
-[1]: 
-
 [Flashcard](https://www.brainscape.com/packs/terraform-associate-certification-15603211)
 
 # code01
