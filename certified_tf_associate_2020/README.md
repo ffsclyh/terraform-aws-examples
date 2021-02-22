@@ -8,6 +8,10 @@ One could find **study_guide** which contains the TOC and more information on th
 
 [Flashcard](https://www.brainscape.com/packs/terraform-associate-certification-15603211)
 
+## Other Resources
+
+[Lab code](https://github.com/adv4000/terraform_certified)
+
 # code01
 sample application
 

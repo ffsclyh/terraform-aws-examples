@@ -1,3 +1,15 @@
+resource "aws_s3_bucket" "b" {
+    bucket                      = "hank-test-csv"
+    region                      = "us-east-1"
+    request_payer               = "BucketOwner"
+    tags                        = {}
+
+    versioning {
+        enabled    = false
+        mfa_delete = false
+    }
+}
+
 // create common tags on the resources
 locals {
   common_tags = {
