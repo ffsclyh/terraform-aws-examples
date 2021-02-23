@@ -1,7 +1,10 @@
+resource "aws_s3_bucket" "b" { }
+
 provider "aws" {
-  region  = "ap-south-1"
+  region  = "us-east-1"
   profile = "default"
 }
+
 
 // Create simple ec2 instance in ap-south-1 region
 resource "aws_instance" "myec2" {
